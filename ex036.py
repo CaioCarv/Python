@@ -2,7 +2,7 @@ casa = float(input('QUal o valor da casa?'))
 salario = float(input('Qual é o seu salário?'))
 anos = float(input('Em quantos anos o Sr. deseja pagar?'))
 
-prestacao = casa / anos
+prestacao = casa / (anos * 12)
 limite = salario * 0.3
 
 if prestacao < limite:
