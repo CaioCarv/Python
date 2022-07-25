@@ -1,6 +1,8 @@
-for c in range (1, 500):
-  result = c %2
-  if (result == 1):
-    mult3 = c %3
-    if (mult3 == 0):
-      print(c)
+soma = 0
+cont = 0
+for c in range (1, 501, 2):
+  if c % 3 == 0:
+    cont += 1
+    soma += c
+print('''A soma de todos os valores solicitados é {} e 
+apareceu {} números solicitados'''.format(soma, cont))

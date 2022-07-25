@@ -1,4 +1,3 @@
-for c in range (1, 50):
-  result = c %2
-  if (result == 0):
-    print(c)
+for c in range (2, 51, 2):
+  print(c, end=' ')
+print('Fim')
