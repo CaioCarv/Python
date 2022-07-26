@@ -1,8 +1,13 @@
 maior = 0
 menor = 0
 
-for c in range (1, 4):
-    peso = int(input('Qual é o seu peso? '))
-if peso >= maior:
-    maior = peso
-print(maior)
+for p in range (1, 6):
+    peso = float(input('Qual é o seu peso? '))
+    if p == 1:
+        maior = peso
+        menor = peso
+    elif peso > maior:
+        maior = peso
+    elif peso < menor:
+        menor = peso
+print('O maior peso é {} e o menor peso é {}'.format(maior, menor))
