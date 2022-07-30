@@ -1,3 +1,3 @@
 # Python
- Exercicios e aulas em python PyCharm
+ Exercicios e aulas em python PyCharm </br>
  CURSO EM VIDEO - Mundo 1, 2, 3...
