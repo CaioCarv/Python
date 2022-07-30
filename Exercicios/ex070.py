@@ -20,6 +20,6 @@ while True:
         contin = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
     if contin == 'N':
         break
-print(f'O total gasto em compras é {tot:.2f}')
+print(f'O total gasto em compras é {tot:.2f}.')
 print(f'Tem {mais} produtos com mais de 1000 reais.')
 print(f'O produto mais barato é a {namebarato}')
