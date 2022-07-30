@@ -4,14 +4,18 @@ print('CADASTRE UMA PESSOA')
 print('-------------------')
 while True:
     idade = int(input('Idade: '))
-    sexo = str(input('Sexo: [M/F] ')).upper().strip()
+    sexo = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Sexo: [M/F] ')).upper().strip()[0]
     if idade >= 18:
         maior += 1
     if sexo == 'M':
         homens += 1
     if sexo == 'F' and idade < 20:
         menor20 += 1
-    continuar = str(input('Quer continuar? [S/N]')).upper().strip()
+    continuar = ' '
+    while continuar not in 'SN':
+        continuar = str(input('Quer continuar? [S/N]')).upper().strip()[0]
     if continuar == 'N':
         break
     else:

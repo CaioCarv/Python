@@ -1,46 +1,27 @@
 from random import randint
-jogador = soma = cpu = cont = 0
-print('=-'*20)
-print('VAMOS JOGAR PAR OU ÍMPAR')
-print('=-'*20)
+v =0
 while True:
     jogador = int(input('Diga um valor: '))
-    cpu = randint(0, 10)
-    escolha = str(input('Par ou ímpar? [P/I]')).strip().upper()
-    soma = cpu + jogador
-    if escolha == 'I':
-        final = soma % 2
-        if final == 0:
-            print('-'*20)
-            print(f'Você jogou {jogador} e o computador {cpu}. TOTAL de {soma} DEU PAR!!')
-            print('-'*20)
-            print('Você Perdeu!!')
-            print('-='*20)
-            print(f'GAME OVER! Você venceu {cont} vezes.')
-            print('-'*20)
-            break
+    computador = randint(0,10)
+    total = jogador + computador
+    tipo = ' '
+    while tipo not in'PI':
+        tipo = str(input('Par ou Ímpar? [P/I] ')).upper().strip()[0]
+    print(f'Você jogou {jogador} e o computador {computador}. Total de {total},', end = ' ')
+    print('DEU PAR' if total % 2 == 0 else 'DEU ÍMPAR')
+    if tipo == 'P':
+        if total % 2 == 0:
+            print('Você VENCEU!')
+            v += 1
         else:
-            print('-'*20)
-            print(f'Você jogou {jogador} e o computador {cpu}. TOTAL de {soma} DEU ÍMPAR!!')
-            print('-'*20)
-            print('Você Venceu!!')
-            print('-='*20)
-            cont += 1
-    else:
-        final = soma % 2
-        if final == 1:
-            print('-'*20)
-            print(f'Você jogou {jogador} e o computador {cpu}. TOTAL de {soma} DEU ÍMPAR!')
-            print('-'*20)
-            print('Você Perdeu!')
-            print('-='*20)
-            print(f'GAME OVER! Você venceu {cont} vezes.')
-            print('-'*20)
+            print('Você PERDEU!')
             break
+    elif tipo == 'I':
+        if total % 2 == 1:
+            print('Você VENCEU!')
+            v += 1
         else:
-            print('-'*20)
-            print(f'Você jogou {jogador} e o computador {cpu}. TOTAL de {soma} DEU PAR!')
-            print('-'*20)
-            print('Você Venceu!')
-            print('-='*20)
-            cont +=1
+            print('Você PERDEU!')
+            break
+    print('Vamos jogar novamente...')
+print(f'GAME OVER! Você venceu {v} vezes.')

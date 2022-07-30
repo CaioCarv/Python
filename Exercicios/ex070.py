@@ -15,9 +15,11 @@ while True:
     if price < menor:
         menor = price
         namebarato = name
-    contin = str(input('Deseja continuar? [S/N]')).upper().strip()
+    contin = ' '
+    while contin not in 'SN':
+        contin = str(input('Deseja continuar? [S/N]')).upper().strip()[0]
     if contin == 'N':
         break
-print(f'O total gasto em compras é {tot}.')
+print(f'O total gasto em compras é {tot:.2f}')
 print(f'Tem {mais} produtos com mais de 1000 reais.')
 print(f'O produto mais barato é a {namebarato}')
