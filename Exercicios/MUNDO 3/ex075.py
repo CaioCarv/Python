@@ -1,16 +1,15 @@
-valor = int(input('Digite um valor: ' ))
-valor2 = int(input('Digite mais um valor: '))
-valor3 = int(input('Digite outro valor: '))
-valor4 = int(input('Digite o último valor: '))
-tup = (valor, valor2, valor3, valor4)
-soma = 0
-for som9 in tup:
-    if som9 == 9:
-        soma += 1
-    if som9 == 3:
-        print(f'O número 3 está {enumerate(tup)}')
-        break
-    if som9 % 2 ==0:
-        par = (som9)
-print(f'Os números pares foram {par}')
-print(f'Apareceu {soma} vezes o número 9!')
+num = (int(input('Digite um número: ')),
+       int(input('Digite outro número: ')),
+       int(input('Digite mais um número: ')),
+       int(input('Digite o último número: ')))
+print('*='*15)
+print(f'Você digitou os valores {num}')
+print(f'O Valor 9 apareceu {num.count(9)} vezes.')
+if 3 in num:
+       print(f'O valor 3 apareceu na {num.index(3)+1}° posição')
+else:
+       print('Não contém o valor 3 na tupla!')
+print('Os valores pares digitados foram ', end='')
+for n in num:
+       if n % 2 ==0:
+              print(n, end=' ')

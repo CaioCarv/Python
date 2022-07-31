@@ -1,4 +1,16 @@
 from random import randint
+numeros = randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10),
+for n in numeros:
+    print(f'{n}', end= ' ')
+print(f'\nO maior valor sorteado foi {max(numeros)}')
+print(f'O menor valor sorteado foi {min(numeros)}')
+
+
+
+
+
+
+'''from random import randint
 maior = soma = 0
 print('Os valores sorteados foram: ', end='')
 for aleat in range(1, 6):
@@ -12,5 +24,4 @@ for aleat in range(1, 6):
             maior = aleat
         if aleat <= menor:
             menor = aleat
-print(f'\nO maior valor sorteado é {maior} e o menor foi o {menor}')
-
+print(f'\nO maior valor sorteado é {maior} e o menor foi o {menor}')'''
