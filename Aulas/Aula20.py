@@ -16,5 +16,3 @@ titulo(' CURSO EM VIDEO ')
 titulo(' Aprenda Python ')
 titulo('  Caio Felipe  ')
 soma(5, 4)
-
-
