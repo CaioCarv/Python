@@ -1,0 +1,7 @@
+Caio;23
+Luiza;22
+Mayra;25
+Felipe;21
+Pedro;19
+Carlos;17
+Gustavo;24
